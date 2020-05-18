@@ -5,6 +5,6 @@ export default {
   frame: {
     name: "dashboard",
     version: "0.1.0",
-    host: "http://www.shuva.cn/demo/puzzle-parts"
+    // host: "http://www.shuva.cn/demo/puzzle-parts"
   }
 };

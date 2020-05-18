@@ -37,6 +37,47 @@ export default [
     puzzle: "test",
     version: "0.1.0",
     host: "http://www.shuva.cn/demo/puzzle-parts"
+  }, {
+    id: "device",
+    name: "PUZZLE ddd 测试模块",
+    leaf: false,
+    children: [
+      {
+        id: "test1",
+        name: "测试页面 KeepAlive",
+        leaf: true,
+        page: "/test1",
+        puzzle: "device",
+        resource: "device_test1"
+      },
+      {
+        id: "test2",
+        name: "测试长页面记录滚动条位置",
+        leaf: true,
+        page: "/test2",
+        puzzle: "device",
+        resource: "device_test2"
+      },
+      {
+        id: "puzzlesDetail",
+        name: "模块加载详情",
+        leaf: true,
+        page: "/puzzlesDetail",
+        puzzle: "device",
+        resource: "device_puzzlesDetail"
+      },
+      {
+        id: "changeFrame",
+        name: "切换基座（灰度测试）",
+        leaf: true,
+        page: "/changeFrame",
+        puzzle: "device",
+        resource: "device_changeFrame"
+      }
+    ],
+    icon: "puzzle",
+    puzzle: "device",
+    version: "0.1.1"
   },
   {
     id: "elastic",

@@ -1,7 +1,7 @@
 <template>
   <div class="page">
     <BaseHome />
-    <div>fhfsfsfsfi</div>
+    <div>fhi</div>
     <b>当前使用基座：</b>
     <div>{{frame}}</div>
     <br>

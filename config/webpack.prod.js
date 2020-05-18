@@ -4,6 +4,7 @@ const webpackPromise = require("./utils").webpackPromise;
 
 const _core = require("./webpack.build.core");
 const _common = require("./webpack.build.common");
+const _public = require("./webpack.build.public");
 
 const promptList = [
   {
@@ -44,6 +45,10 @@ const promptList = [
   // 打包核心
   console.log("\n--------------- BUILD CORE ---------------");
   await webpackPromise(_core);
+
+  // 打包公共模块
+  console.log("\n--------------- BUILD public ---------------");
+  await webpackPromise(_public);
 
   // 打包架构
   console.log("\n--------------- BUILD FRAMES ---------------");

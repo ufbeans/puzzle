@@ -47,6 +47,10 @@ export default {
       document.title = PUZZLE_CONFIG.appName;
       // 获取数据
       const [user, menus] = await Promise.all([getUser(), getMenus()]);
+      menus.map(child =>
+        // 优化id。防止id重复导致item多个被选中
+        child.children.map(item => (item.id = item.puzzle + "_" + item.id))
+      );
       this.$store.commit("SET_USER", user);
       this.$store.commit("SET_MENUS", menus);
       // 组装基座并获取基座嵌套路由

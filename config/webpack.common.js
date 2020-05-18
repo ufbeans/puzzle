@@ -16,7 +16,8 @@ module.exports = {
       "@": resolve("src"),
       "@core": resolve("src/core"),
       "@frames": resolve("src/frames"),
-      "@puzzles": resolve("src/puzzles")
+      "@puzzles": resolve("src/puzzles"),
+      "@components": resolve("src/public/components")
     }
   },
   module: {

@@ -6,7 +6,7 @@ const webpack = require("webpack");
 exports.resolve = dir => path.join(__dirname, "..", dir);
 
 // 获取文件夹目录
-const getAllDirs = function(mypath = ".") {
+const getAllDirs = function (mypath = ".") {
   const items = fs.readdirSync(mypath);
   let result = [];
   // 遍历当前目录中所有的文件和文件夹
@@ -25,7 +25,7 @@ const getAllDirs = function(mypath = ".") {
 exports.getAllDirs = getAllDirs;
 
 // 获取文件目录
-const getAllFiles = function(mypath = ".") {
+const getAllFiles = function (mypath = ".") {
   const items = fs.readdirSync(mypath);
   let result = [];
   items.map(item => {
@@ -39,7 +39,7 @@ exports.getAllFiles = getAllFiles;
 // 将 Webpack 打包封装成 Promise
 exports.webpackPromise = config =>
   new Promise((resolve, reject) => {
-    webpack(config, function(err, stats) {
+    webpack(config, function (err, stats) {
       if (err) throw err;
       process.stdout.write(
         stats.toString({
@@ -52,7 +52,7 @@ exports.webpackPromise = config =>
   });
 
 // 获取 dll
-exports.getDlls = function() {
+exports.getDlls = function () {
   let dlls = ["core", "puzzle"];
   let dllNames = [];
   for (let item of dlls) {
